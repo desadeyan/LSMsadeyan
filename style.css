@@ -1,0 +1,156 @@
+/* Definisi Warna CSS Variables untuk kemudahan perubahan */
+:root {
+    --color-primary-green: #2E7D32; /* Hijau daun */
+    --color-light-cream: #F1F8E9; /* Krem pucat */
+    --color-white: #FFFFFF; /* Putih bersih */
+    --color-dark-text: #333333; /* Abu tua untuk teks */
+}
+
+body {
+    font-family: 'Quicksand', sans-serif; /* Menggunakan font Quicksand dari Google Fonts */
+    color: var(--color-dark-text); /* Warna teks default */
+    background-color: var(--color-light-cream); /* Background halaman */
+}
+
+/* Custom CSS untuk efek dan responsivitas */
+.hero-slide {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.hero-slide.active {
+    opacity: 1;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.program-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+}
+.lightbox img {
+    max-height: 80vh;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Mobile menu specific styles */
+.hamburger-menu {
+    display: none;
+}
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+}
+.mobile-menu.active {
+    display: block;
+}
+
+/* --- DROPDOWN NAVIGASI DESKTOP PERBAIKAN PENTING --- */
+.nav-dropdown .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); /* Mulai sedikit ke bawah */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    pointer-events: none; /* Awalnya tidak bisa diklik */
+    top: 100%; /* Pastikan posisi di bawah parent */
+    /* Menjembatani celah, pastikan tidak ada margin-top besar dari Tailwind default */
+    margin-top: 0; /* Override Tailwind mt-0.5 if it causes issues */
+    padding-top: 0; /* Pastikan tidak ada padding atas yang membuat celah */
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Kembali ke posisi normal */
+    pointer-events: auto; /* Aktifkan klik */
+    transition-delay: 0s; /* Muncul tanpa delay */
+}
+
+/* KUNCI PERBAIKAN: Penundaan saat menghilang */
+.nav-dropdown .dropdown-menu {
+    /* Atur semua transisi agar bisa ditunda */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-dropdown:not(:hover) .dropdown-menu {
+    transition-delay: 0.15s; /* MENUNDA HILANGNYA DROPDOWN */
+}
+
+/* Pastikan area hover dari parent cukup besar untuk mencakup dropdown */
+.nav-dropdown > a {
+    position: relative; /* Penting untuk z-index jika perlu */
+    z-index: 20; /* Pastikan link induk di atas jika ada tumpang tindih */
+    padding-bottom: 15px; /* Tambah padding bawah untuk area "zona aman" */
+}
+/* --- AKHIR PERBAIKAN DROPDOWN NAVIGASI DESKTOP --- */
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    .hero-section-text {
+        padding: 1rem;
+    }
+    /* Sembunyikan dropdown menu di mobile */
+    .nav-dropdown .dropdown-menu {
+        display: none !important; /* Pastikan dropdown desktop tidak muncul di mobile */
+    }
+}
+
+/* Override Tailwind's default body background if it interferes, menggunakan !important */
+.bg-gray-50 {
+    background-color: var(--color-light-cream) !important;
+}

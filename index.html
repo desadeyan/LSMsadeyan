@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desadeyan - Desa Sejahtera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo/PP Watsapp.png" class="w-12 h-12 bg-[var(--color-primary-green)] rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+                <h1 class="text-xl font-bold text-[var(--color-primary-green)]">Desadeyan</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-[var(--color-primary-green)] font-medium hover:text-[var(--color-dark-text)] transition">Beranda</a>
+                <a href="#about" class="text-[var(--color-dark-text)] font-medium hover:text-[var(--color-primary-green)] transition">Tentang Kami</a>
+                <a href="#programs" class="text-[var(--color-dark-text)] font-medium hover:text-[var(--color-primary-green)] transition">Program</a>
+                <a href="#gallery" class="text-[var(--color-dark-text)] font-medium hover:text-[var(--color-primary-green)] transition">Galeri</a>
+                <a href="#contact" class="text-[var(--color-dark-text)] font-medium hover:text-[var(--color-primary-green)] transition">Kontak</a>
+            </nav>
+            
+            <div class="hamburger-menu md:hidden">
+                <button id="menu-toggle" class="text-[var(--color-dark-text)] focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="mobile-menu py-2">
+            <a href="#home" class="block px-4 py-2 text-[var(--color-dark-text)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)]">Beranda</a>
+            <a href="#about" class="block px-4 py-2 text-[var(--color-dark-text)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)]">Tentang Kami</a>
+            <a href="#programs" class="block px-4 py-2 text-[var(--color-dark-text)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)]">Program</a>
+            <a href="#gallery" class="block px-4 py-2 text-[var(--color-dark-text)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)]">Galeri</a>
+            <a href="#contact" class="block px-4 py-2 text-[var(--color-dark-text)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)]">Kontak</a>
+        </div>
+    </header>
+
+    <section id="home" class="relative h-screen pt-20">
+        <div class="hero-slide active" style="background-image: url('image/FOTO\ DESA\ \(2\).jpg');"></div>
+        <div class="hero-slide" style="background-image: url('image/FOTO\ DESA\ \(3\).jpg');"></div>
+        <div class="hero-slide" style="background-image: url('image/FOTO\ DESA\ \(4\).jpg');"></div>
+        
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center">
+            <div class="container mx-auto px-4 hero-section-text">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Desadeyan: Membangun Desa, Menjaga Alam</h1>
+                    <p class="text-xl text-white mb-8">Bersama kami wujudkan desa yang mandiri, sejahtera, dan berkelanjutan, dengan harmoni bersama lingkungan.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#programs" class="bg-[var(--color-primary-green)] hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">Lihat Program</a>
+                        <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-[var(--color-primary-green)] text-white font-bold py-3 px-6 rounded-full transition duration-300">Bergabung Bersama</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center">
+            <div class="flex space-x-2">
+                <button class="slide-dot w-3 h-3 rounded-full bg-white bg-opacity-70 hover:bg-opacity-100 focus:outline-none active"></button>
+                <button class="slide-dot w-3 h-3 rounded-full bg-white bg-opacity-70 hover:bg-opacity-100 focus:outline-none"></button>
+                <button class="slide-dot w-3 h-3 rounded-full bg-white bg-opacity-70 hover:bg-opacity-100 focus:outline-none"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-[var(--color-white)] section">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-primary-green)] mb-4">Tentang Desadeyan</h2>
+                <div class="w-20 h-1 bg-[var(--color-primary-green)] mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="image/FOTO DESA (1).jpg" alt="Tim Desadeyan di Desa" class="rounded-lg shadow-xl w-full">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-[var(--color-dark-text)] mb-4">Visi & Misi Kami</h3>
+                    <p class="text-[var(--color-dark-text)] mb-6">Desadeyan adalah lembaga swadaya masyarakat yang berkomitmen untuk memberdayakan masyarakat desa melalui program-program berkelanjutan yang fokus pada kelestarian lingkungan, edukasi, dan ekonomi kreatif.</p>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-[var(--color-light-cream)] p-2 rounded-full mr-4">
+                                <i class="fas fa-bullseye text-[var(--color-primary-green)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[var(--color-dark-text)]">Visi</h4>
+                                <p class="text-[var(--color-dark-text)]">Mewujudkan desa-desa mandiri yang berdaya saing dengan masyarakat sejahtera, peduli lingkungan, dan kaya akan kearifan lokal.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-[var(--color-light-cream)] p-2 rounded-full mr-4">
+                                <i class="fas fa-tasks text-[var(--color-primary-green)]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[var(--color-dark-text)]">Misi</h4>
+                                <ul class="list-disc list-inside text-[var(--color-dark-text)] pl-4">
+                                    <li>Meningkatkan kesadaran lingkungan dan praktik berkelanjutan.</li>
+                                    <li>Mengembangkan potensi ekonomi lokal berbasis sumber daya alam dan budaya.</li>
+                                    <li>Memperkuat kapasitas sumber daya manusia melalui pendidikan dan pelatihan.</li>
+                                    <li>Mendorong partisipasi aktif masyarakat dalam pembangunan desa.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-[var(--color-light-cream)] p-4 rounded-lg shadow-sm">
+                            <div class="text-[var(--color-primary-green)] text-3xl mb-2">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4 class="font-bold text-[var(--color-dark-text)]">50+ Desa</h4>
+                            <p class="text-[var(--color-dark-text)] text-sm">Telah kami dampingi</p>
+                        </div>
+                        <div class="bg-[var(--color-light-cream)] p-4 rounded-lg shadow-sm">
+                            <div class="text-[var(--color-primary-green)] text-3xl mb-2">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <h4 class="font-bold text-[var(--color-dark-text)]">10.000+</h4>
+                            <p class="text-[var(--color-dark-text)] text-sm">Penerima manfaat langsung</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="py-20 bg-[var(--color-light-cream)] section">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-primary-green)] mb-4">Program Kami</h2>
+                <p class="text-xl text-[var(--color-dark-text)] max-w-2xl mx-auto">Berbagai inisiatif untuk mewujudkan desa yang berdaya dan lestari</p>
+                <div class="w-20 h-1 bg-[var(--color-primary-green)] mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="program-card bg-[var(--color-white)] rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="image/FOTO DESA (1).jpg" alt="Pendidikan Desa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[var(--color-light-cream)] p-2 rounded-full mr-3">
+                                <i class="fas fa-book-reader text-[var(--color-primary-green)]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[var(--color-dark-text)]">Edukasi Literasi & Lingkungan</h3>
+                        </div>
+                        <p class="text-[var(--color-dark-text)] mb-4">Meningkatkan minat baca dan kesadaran lingkungan sejak dini melalui program edukasi interaktif di desa.</p>
+                        <button class="program-detail-btn text-[var(--color-primary-green)] font-medium hover:text-[var(--color-dark-text)] transition" data-program="1">Lihat Detail <i class="fas fa-chevron-right ml-1"></i></button>
+                    </div>
+                </div>
+                
+                <div class="program-card bg-[var(--color-white)] rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="image/FOTO DESA (2).jpg" alt="Ekonomi Kreatif" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[var(--color-light-cream)] p-2 rounded-full mr-3">
+                                <i class="fas fa-lightbulb text-[var(--color-primary-green)]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[var(--color-dark-text)]">Pemberdayaan Ekonomi Lokal</h3>
+                        </div>
+                        <p class="text-[var(--color-dark-text)] mb-4">Mengembangkan potensi ekonomi desa melalui pelatihan keterampilan dan fasilitasi pemasaran produk unggulan lokal.</p>
+                        <button class="program-detail-btn text-[var(--color-primary-green)] font-medium hover:text-[var(--color-dark-text)] transition" data-program="2">Lihat Detail <i class="fas fa-chevron-right ml-1"></i></button>
+                    </div>
+                </div>
+                
+                <div class="program-card bg-[var(--color-white)] rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="image/FOTO DESA (3).jpg" alt="Kesehatan Masyarakat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[var(--color-light-cream)] p-2 rounded-full mr-3">
+                                <i class="fas fa-heartbeat text-[var(--color-primary-green)]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[var(--color-dark-text)]">Kesehatan & Sanitasi Desa</h3>
+                        </div>
+                        <p class="text-[var(--color-dark-text)] mb-4">Peningkatan kesadaran kesehatan, penyediaan akses sanitasi layak, dan program gizi seimbang bagi masyarakat.</p>
+                        <button class="program-detail-btn text-[var(--color-primary-green)] font-medium hover:text-[var(--color-dark-text)] transition" data-program="3">Lihat Detail <i class="fas fa-chevron-right ml-1"></i></button>
+                    </div>
+                </div>
+                
+                <div class="program-card bg-[var(--color-white)] rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="image/FOTO DESA (4).jpg" alt="Infrastruktur Desa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[var(--color-light-cream)] p-2 rounded-full mr-3">
+                                <i class="fas fa-tractor text-[var(--color-primary-green)]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[var(--color-dark-text)]">Inovasi Pertanian & Lingkungan</h3>
+                        </div>
+                        <p class="text-[var(--color-dark-text)] mb-4">Pendampingan petani dalam menerapkan praktik pertanian berkelanjutan dan teknologi ramah lingkungan.</p>
+                        <button class="program-detail-btn text-[var(--color-primary-green)] font-medium hover:text-[var(--color-dark-text)] transition" data-program="4">Lihat Detail <i class="fas fa-chevron-right ml-1"></i></button>
+                    </div>
+                </div>
+                
+                <div class="program-card bg-[var(--color-white)] rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="image/FOTO DESA (5).jpg" alt="Partisipasi Masyarakat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[var(--color-light-cream)] p-2 rounded-full mr-3">
+                                <i class="fas fa-handshake text-[var(--color-primary-green)]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[var(--color-dark-text)]">Pengembangan Kapasitas Komunitas</h3>
+                        </div>
+                        <p class="text-[var(--color-dark-text)] mb-4">Meningkatkan kemandirian desa melalui pelatihan kepemimpinan dan fasilitasi pertemuan warga untuk perencanaan partisipatif.</p>
+                        <button class="program-detail-btn text-[var(--color-primary-green)] font-medium hover:text-[var(--color-dark-text)] transition" data-program="5">Lihat Detail <i class="fas fa-chevron-right ml-1"></i></button>
+                    </div>
+                </div>
+                
+                <div class="program-card bg-[var(--color-white)] rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="image/FOTO DESA (6).jpg" alt="Sumber Daya Air" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[var(--color-light-cream)] p-2 rounded-full mr-3">
+                                <i class="fas fa-faucet text-[var(--color-primary-green)]"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-[var(--color-dark-text)]">Akses Air Bersih & Sanitasi</h3>
+                        </div>
+                        <p class="text-[var(--color-dark-text)] mb-4">Pembangunan sarana air bersih, pengelolaan limbah, dan edukasi higienis untuk kesehatan masyarakat desa.</p>
+                        <button class="program-detail-btn text-[var(--color-primary-green)] font-medium hover:text-[var(--color-dark-text)] transition" data-program="6">Lihat Detail <i class="fas fa-chevron-right ml-1"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-[var(--color-white)] section">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-primary-green)] mb-4">Galeri Kegiatan</h2>
+                <p class="text-xl text-[var(--color-dark-text)] max-w-2xl mx-auto">Momen-momen inspiratif dari kegiatan Desadeyan di berbagai desa</p>
+                <div class="w-20 h-1 bg-[var(--color-primary-green)] mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="image/FOTO DESA (1).jpg" alt="Edukasi Lingkungan di Desa" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="image/FOTO DESA (2).jpg" alt="Pelatihan Pertanian Berkelanjutan" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="image/FOTO DESA (3).jpg" alt="Workshop Kerajinan Lokal" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="image/FOTO DESA (4).jpg" alt="Gotong Royong Pembangunan Desa" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="image/FOTO DESA (5).jpg" alt="Penyuluhan Kesehatan Masyarakat" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="image/FOTO DESA (6).jpg" alt="Distribusi Bibit Unggul" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="image/FOTO DESA (3).jpg" alt="Pelatihan Digitalisasi Produk Desa" class="w-full h-48 object-cover gallery-img">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md cursor-pointer">
+                    <img src="image/FOTO DESA (4).jpg" alt="Aksi Bersih Lingkungan" class="w-full h-48 object-cover gallery-img">
+                </div>
+               
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="view-more-btn" class="bg-[var(--color-primary-green)] hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                    Lihat Lebih Banyak <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-[var(--color-primary-green)] text-white section">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Bersama Wujudkan Desa Mandiri dan Lestari</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Dukungan Anda sangat berarti bagi keberlanjutan program-program pemberdayaan masyarakat desa dan pelestarian lingkungan.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-[var(--color-white)] hover:bg-gray-200 text-[var(--color-primary-green)] font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Donasi Sekarang</a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-[var(--color-primary-green)] text-white font-bold py-3 px-8 rounded-full transition duration-300">Jadi Relawan</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-[var(--color-light-cream)] section">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-primary-green)] mb-4">Hubungi Kami</h2>
+                <p class="text-xl text-[var(--color-dark-text)] max-w-2xl mx-auto">Kami senang mendengar dari Anda. Mari berkolaborasi untuk perubahan yang lebih baik.</p>
+                <div class="w-20 h-1 bg-[var(--color-primary-green)] mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form id="contact-form" action="https://formspree.io/f/yourformhash" method="POST" class="bg-[var(--color-white)] p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-[var(--color-dark-text)] font-medium mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-green)]" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-[var(--color-dark-text)] font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-green)]" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-[var(--color-dark-text)] font-medium mb-2">Subjek</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-green)]" required>
+                                <option value="" disabled selected>Pilih subjek</option>
+                                <option value="donation">Donasi</option>
+                                <option value="volunteer">Relawan</option>
+                                <option value="partnership">Kemitraan</option>
+                                <option value="information">Informasi</option>
+                                <option value="other">Lainnya</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-[var(--color-dark-text)] font-medium mb-2">Pesan</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-green)]" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-[var(--color-primary-green)] hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Kirim Pesan</button>
+                        
+                        <div id="form-message" class="mt-4 p-3 text-center rounded-lg hidden" role="alert"></div>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-[var(--color-white)] p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-[var(--color-dark-text)] mb-6">Informasi Kontak</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-[var(--color-light-cream)] p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-[var(--color-primary-green)]"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[var(--color-dark-text)]">Alamat Kantor</h4>
+                                    <p class="text-[var(--color-dark-text)]">Kebayanan II, Jati, Kec. Sumberlawang, Kabupaten Sragen, Jawa Tengah, Indonesia</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-[var(--color-light-cream)] p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-[var(--color-primary-green)]"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[var(--color-dark-text)]">Email</h4>
+                                    <p class="text-[var(--color-dark-text)]">desadeyan@gmail.com</p>
+                                    <p class="text-[var(--color-dark-text)]">partnership@desadeyan.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-[var(--color-light-cream)] p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-[var(--color-primary-green)]"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[var(--color-dark-text)]">Telepon</h4>
+                                    <p class="text-[var(--color-dark-text)]">+62 821 1234 5678</p>
+                                    <p class="text-[var(--color-dark-text)]">+62 852 9876 5432 (WhatsApp)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-[var(--color-light-cream)] p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-[var(--color-primary-green)]"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[var(--color-dark-text)]">Jam Operasional</h4>
+                                    <p class="text-[var(--color-dark-text)]">Senin - Jumat: 09.00 - 16.00 WIB</p>
+                                    <p class="text-[var(--color-dark-text)]">Sabtu: 09.00 - 13.00 WIB</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-[var(--color-dark-text)] mb-4">Ikuti Kami</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/dsadeyan/?locale=id_ID" class="bg-[var(--color-light-cream)] w-10 h-10 rounded-full flex items-center justify-center text-[var(--color-primary-green)] hover:bg-gray-200 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-[var(--color-light-cream)] w-10 h-10 rounded-full flex items-center justify-center text-[var(--color-primary-green)] hover:bg-gray-200 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://www.instagram.com/pesantrenmasyarakatsadeyan/" class="bg-[var(--color-light-cream)] w-10 h-10 rounded-full flex items-center justify-center text-[var(--color-primary-green)] hover:bg-gray-200 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@desadeyanTV" class="bg-[var(--color-light-cream)] w-10 h-10 rounded-full flex items-center justify-center text-[var(--color-primary-green)] hover:bg-gray-200 transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="bg-[var(--color-light-cream)] w-10 h-10 rounded-full flex items-center justify-center text-[var(--color-primary-green)] hover:bg-gray-200 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[var(--color-primary-green)] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[var(--color-primary-green)] font-bold text-lg mr-3">D</div>
+                        <h3 class="text-xl font-bold">Desadeyan</h3>
+                    </div>
+                    <p class="text-gray-200">Lembaga Swadaya Masyarakat yang berkomitmen untuk memberdayakan masyarakat desa melalui program-program berkelanjutan yang ramah lingkungan.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-200 hover:text-white transition">Beranda</a></li>
+                        <li><a href="profile.html#profil-kami" class="text-gray-200 hover:text-white transition">Profil Kami</a></li>
+                        <li><a href="index.html#journey-section-inside" class="text-gray-200 hover:text-white transition">Cerita Perjalanan</a></li>
+                        <li><a href="programs.html" class="text-gray-200 hover:text-white transition">Program</a></li>
+                        <li><a href="#gallery" class="text-gray-200 hover:text-white transition">Galeri</a></li>
+                        <li><a href="#contact" class="text-gray-200 hover:text-white transition">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Program Unggulan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="programs.html#program-edukasi" class="text-gray-200 hover:text-white transition">Edukasi Literasi & Lingkungan</a></li>
+                        <li><a href="programs.html#program-ekonomi" class="text-gray-200 hover:text-white transition">Pemberdayaan Ekonomi Lokal</a></li>
+                        <li><a href="programs.html#program-kesehatan" class="text-gray-200 hover:text-white transition">Kesehatan & Sanitasi Desa</a></li>
+                        <li><a href="programs.html#program-pertanian" class="text-gray-200 hover:text-white transition">Inovasi Pertanian & Lingkungan</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Berlangganan</h4>
+                    <p class="text-gray-200 mb-4">Dapatkan update terbaru tentang kegiatan kami langsung ke email Anda.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Anda" class="px-4 py-2 rounded-l-lg focus:outline-none text-[var(--color-dark-text)] w-full">
+                        <button type="submit" class="bg-white hover:bg-gray-200 text-[var(--color-primary-green)] px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 mb-4 md:mb-0">© 2023 Desadeyan. Hak Cipta Dilindungi.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white transition">Kebijakan Privasi</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">Syarat & Ketentuan</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">Peta Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="program-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-[var(--color-white)] rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 id="modal-title" class="text-2xl font-bold text-[var(--color-dark-text)]"></h3>
+                        <div id="modal-category" class="text-[var(--color-primary-green)] mt-1"></div>
+                    </div>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <img id="modal-image" src="" alt="" class="w-full h-64 object-cover rounded-lg">
+                    </div>
+                    <div>
+                        <div class="mb-6">
+                            <h4 class="font-bold text-[var(--color-dark-text)] mb-2">Deskripsi Program</h4>
+                            <p id="modal-description" class="text-[var(--color-dark-text)]"></p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-[var(--color-dark-text)] mb-2">Tujuan</h4>
+                            <ul id="modal-goals" class="list-disc list-inside text-[var(--color-dark-text)] pl-4"></ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-[var(--color-dark-text)] mb-2">Pencapaian</h4>
+                            <div id="modal-achievements" class="text-[var(--color-dark-text)]"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="font-bold text-[var(--color-dark-text)] mb-4">Galeri Program</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                            <img src="image/FOTO DESA (1).jpg" alt="Detail Program Gambar 1" class="w-full h-32 object-cover gallery-img">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                            <img src="image/FOTO DESA (2).jpg" alt="Detail Program Gambar 2" class="w-full h-32 object-cover gallery-img">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                            <img src="image/FOTO DESA (3).jpg" alt="Detail Program Gambar 3" class="w-full h-32 object-cover gallery-img">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 flex justify-center">
+                    <a href="#contact" class="bg-[var(--color-primary-green)] hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                        Dukung Program Ini <i class="fas fa-heart ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content relative">
+            <img id="lightbox-img" src="" alt="" class="rounded-lg">
+            <button id="close-lightbox" class="absolute top-4 right-4 text-white text-3xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="lightbox-caption" class="text-white text-center mt-2"></div>
+        </div>
+    </div>
+
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-[var(--color-primary-green)] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-green-700 transition hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

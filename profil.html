@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Desadeyan - Siapa Kami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-[var(--color-primary-green)] rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">D</div>
+                <h1 class="text-xl font-bold text-[var(--color-primary-green)]">Desadeyan</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#home" class="text-[var(--color-dark-text)] font-medium hover:text-[var(--color-primary-green)] transition">Beranda</a>
+                
+                <div class="relative group nav-dropdown">
+                    <a href="#profil-kami" class="text-[var(--color-primary-green)] font-medium hover:text-[var(--color-dark-text)] transition cursor-pointer flex items-center px-2 py-1">
+                        Tentang Kami <i class="fas fa-chevron-down ml-2 text-sm group-hover:rotate-180 transition-transform"></i>
+                    </a>
+                    <ul class="absolute hidden group-hover:block bg-white shadow-lg py-2 rounded-lg mt-0.5 w-48 z-10 dropdown-menu">
+                        <li><a href="#profil-kami" class="block px-4 py-2 text-[var(--color-primary-green)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)] transition">Profil Kami</a></li>
+                        <li><a href="index.html#journey-section-inside" class="block px-4 py-2 text-[var(--color-dark-text)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)] transition">Cerita Perjalanan</a></li>
+                    </ul>
+                </div>
+                
+                <a href="index.html#programs" class="text-[var(--color-dark-text)] font-medium hover:text-[var(--color-primary-green)] transition">Program</a>
+                <a href="index.html#gallery" class="text-[var(--color-dark-text)] font-medium hover:text-[var(--color-primary-green)] transition">Galeri</a>
+                <a href="index.html#contact" class="text-[var(--color-dark-text)] font-medium hover:text-[var(--color-primary-green)] transition">Kontak</a>
+            </nav>
+            
+            <div class="hamburger-menu md:hidden">
+                <button id="menu-toggle" class="text-[var(--color-dark-text)] focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="mobile-menu py-2">
+            <a href="index.html#home" class="block px-4 py-2 text-[var(--color-dark-text)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)]">Beranda</a>
+            <a href="#profil-kami" class="block px-4 py-2 text-[var(--color-primary-green)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)]">Profil Kami</a>
+            <a href="index.html#journey-section-inside" class="block px-4 py-2 text-[var(--color-dark-text)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)]">Cerita Perjalanan</a>
+            <a href="index.html#programs" class="block px-4 py-2 text-[var(--color-dark-text)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)]">Program</a>
+            <a href="index.html#gallery" class="block px-4 py-2 text-[var(--color-dark-text)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)]">Galeri</a>
+            <a href="index.html#contact" class="block px-4 py-2 text-[var(--color-dark-text)] hover:bg-[var(--color-light-cream)] hover:text-[var(--color-primary-green)]">Kontak</a>
+        </div>
+    </header>
+
+    <section class="relative h-64 md:h-80 flex items-center justify-center text-white pt-20" style="background-image: url('https://images.unsplash.com/photo-1544426500-1c667e415b1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="z-10 text-center container px-4">
+            <h1 class="text-4xl md:text-5xl font-bold">Profil Desadeyan</h1>
+            <p class="mt-2 text-lg md:text-xl">Mengenal Lebih Dekat Misi dan Tim di Balik Perubahan Desa.</p>
+        </div>
+    </section>
+
+    <main class="py-20 bg-[var(--color-white)]">
+        <div class="container mx-auto px-4">
+            <div id="profil-kami" class="section bg-white p-8 rounded-lg shadow-md mb-12">
+                <h2 class="text-3xl font-bold text-[var(--color-primary-green)] mb-6 text-center">Siapa Kami: LSM Desadeyan</h2>
+                <div class="flex flex-col md:flex-row items-start gap-12">
+                    <div class="md:w-1/2">
+                        <p class="text-[var(--color-dark-text)] text-lg leading-relaxed mb-4">
+                            Desadeyan adalah Lembaga Swadaya Masyarakat yang berdiri sejak tahun 2010, berdedikasi untuk menciptakan perubahan positif dan berkelanjutan di wilayah pedesaan Indonesia. Kami percaya bahwa setiap desa memiliki potensi unik yang, jika diberdayakan dengan tepat, dapat menjadi pilar kemajuan bangsa.
+                        </p>
+                        <p class="text-[var(--color-dark-text)] text-lg leading-relaxed mb-4">
+                            Visi kami adalah mewujudkan desa-desa mandiri yang berdaya saing dengan masyarakat sejahtera, peduli lingkungan, dan kaya akan kearifan lokal. Misi kami meliputi peningkatan kesadaran lingkungan, pengembangan ekonomi lokal, penguatan SDM, dan mendorong partisipasi aktif masyarakat.
+                        </p>
+                        <p class="text-[var(--color-dark-text)] text-lg leading-relaxed">
+                            Kami beroperasi melalui pendekatan partisipatif, bekerja sama erat dengan komunitas desa, pemerintah daerah, dan berbagai mitra untuk memastikan program-program kami relevan dan berdampak nyata.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1510525000595-c266675001be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Visi Misi Desadeyan" class="rounded-lg shadow-md w-full">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section bg-[var(--color-light-cream)] p-8 rounded-lg shadow-md mb-12">
+                <h2 class="text-3xl font-bold text-[var(--color-primary-green)] mb-6 text-center">Bidang Fokus Kami</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-[var(--color-white)] rounded-lg shadow-sm">
+                        <div class="text-[var(--color-primary-green)] text-5xl mb-4"><i class="fas fa-tree"></i></div>
+                        <h3 class="text-xl font-bold text-[var(--color-dark-text)] mb-2">Konservasi Lingkungan</h3>
+                        <p class="text-[var(--color-dark-text)] text-base">Melindungi sumber daya alam desa, mengelola limbah, dan mempromosikan praktik ramah lingkungan.</p>
+                    </div>
+                    <div class="text-center p-6 bg-[var(--color-white)] rounded-lg shadow-sm">
+                        <div class="text-[var(--color-primary-green)] text-5xl mb-4"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h3 class="text-xl font-bold text-[var(--color-dark-text)] mb-2">Ekonomi Berkelanjutan</h3>
+                        <p class="text-[var(--color-dark-text)] text-base">Mendukung UMKM desa, pelatihan keterampilan, dan akses pasar produk lokal.</p>
+                    </div>
+                    <div class="text-center p-6 bg-[var(--color-white)] rounded-lg shadow-sm">
+                        <div class="text-[var(--color-primary-green)] text-5xl mb-4"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 class="text-xl font-bold text-[var(--color-dark-text)] mb-2">Edukasi & Literasi</h3>
+                        <p class="text-[var(--color-dark-text)] text-base">Peningkatan kualitas pendidikan, literasi digital, dan kesadaran sosial di desa.</p>
+                    </div>
+                    <div class="text-center p-6 bg-[var(--color-white)] rounded-lg shadow-sm">
+                        <div class="text-[var(--color-primary-green)] text-5xl mb-4"><i class="fas fa-users-class"></i></div>
+                        <h3 class="text-xl font-bold text-[var(--color-dark-text)] mb-2">Pemberdayaan Masyarakat</h3>
+                        <p class="text-[var(--color-dark-text)] text-base">Mendorong partisipasi aktif, kepemimpinan lokal, dan penguatan kapasitas komunitas.</p>
+                    </div>
+                    <div class="text-center p-6 bg-[var(--color-white)] rounded-lg shadow-sm">
+                        <div class="text-[var(--color-primary-green)] text-5xl mb-4"><i class="fas fa-heartbeat"></i></div>
+                        <h3 class="text-xl font-bold text-[var(--color-dark-text)] mb-2">Kesehatan & Sanitasi</h3>
+                        <p class="text-[var(--color-dark-text)] text-base">Peningkatan akses air bersih, fasilitas sanitasi, dan penyuluhan kesehatan dasar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section bg-white p-8 rounded-lg shadow-md mb-12">
+                <h2 class="text-3xl font-bold text-[var(--color-primary-green)] mb-6 text-center">Tim Kami</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-[var(--color-light-cream)] rounded-lg shadow-sm">
+                        <img src="https://via.placeholder.com/150/2E7D32/FFFFFF?text=Ketua" alt="Foto Ketua" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-[var(--color-dark-text)]">Budi Santoso</h3>
+                        <p class="text-[var(--color-primary-green)] text-base mb-2">Ketua Desadeyan</p>
+                        <p class="text-[var(--color-dark-text)] text-sm">Berpengalaman 15 tahun di bidang pemberdayaan masyarakat dan lingkungan.</p>
+                    </div>
+                    <div class="text-center p-6 bg-[var(--color-light-cream)] rounded-lg shadow-sm">
+                        <img src="https://via.placeholder.com/150/2E7D32/FFFFFF?text=Sekretaris" alt="Foto Sekretaris" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-[var(--color-dark-text)]">Dewi Lestari</h3>
+                        <p class="text-[var(--color-primary-green)] text-base mb-2">Sekretaris & Manajer Program</p>
+                        <p class="text-[var(--color-dark-text)] text-sm">Ahli dalam manajemen proyek sosial dan komunikasi komunitas.</p>
+                    </div>
+                    <div class="text-center p-6 bg-[var(--color-light-cream)] rounded-lg shadow-sm">
+                        <img src="https://via.placeholder.com/150/2E7D32/FFFFFF?text=Bendahara" alt="Foto Bendahara" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-[var(--color-dark-text)]">Rahmat Jaya</h3>
+                        <p class="text-[var(--color-primary-green)] text-base mb-2">Bendahara & Pengembangan Kemitraan</p>
+                        <p class="text-[var(--color-dark-text)] text-sm">Spesialis di bidang keuangan nirlaba dan jejaring dengan donor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section bg-[var(--color-light-cream)] p-8 rounded-lg shadow-md mb-12">
+                <h2 class="text-3xl font-bold text-[var(--color-primary-green)] mb-6 text-center">Pencapaian Penting</h2>
+                <div class="grid md:grid-cols-2 gap-8 text-center">
+                    <div>
+                        <div class="text-[var(--color-primary-green)] text-6xl mb-4"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="text-2xl font-bold text-[var(--color-dark-text)] mb-2">15 Tahun Beroperasi</h3>
+                        <p class="text-[var(--color-dark-text)] text-lg">Konsisten mewujudkan perubahan nyata di lapangan.</p>
+                    </div>
+                    <div>
+                        <div class="text-[var(--color-primary-green)] text-6xl mb-4"><i class="fas fa-award"></i></div>
+                        <h3 class="text-2xl font-bold text-[var(--color-dark-text)] mb-2">Diakui Nasional</h3>
+                        <p class="text-[var(--color-dark-text)] text-lg">Penghargaan sebagai LSM Terkemuka dalam Pemberdayaan Desa.</p>
+                    </div>
+                    <div>
+                        <div class="text-[var(--color-primary-green)] text-6xl mb-4"><i class="fas fa-hands-helping"></i></div>
+                        <h3 class="text-2xl font-bold text-[var(--color-dark-text)] mb-2">50+ Desa Terjangkau</h3>
+                        <p class="text-[var(--color-dark-text)] text-lg">Jangkauan program kami tersebar di berbagai pelosok nusantara.</p>
+                    </div>
+                    <div>
+                        <div class="text-[var(--color-primary-green)] text-6xl mb-4"><i class="fas fa-people-carry"></i></div>
+                        <h3 class="text-2xl font-bold text-[var(--color-dark-text)] mb-2">10.000+ Penerima Manfaat</h3>
+                        <p class="text-[var(--color-dark-text)] text-lg">Hidup ribuan individu dan keluarga telah tersentuh dampak positif kami.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section bg-white p-8 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-[var(--color-primary-green)] mb-6 text-center">Testimoni</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-[var(--color-light-cream)] p-6 rounded-lg shadow-sm">
+                        <i class="fas fa-quote-left text-[var(--color-primary-green)] text-3xl mb-4"></i>
+                        <p class="text-[var(--color-dark-text)] italic mb-4">"Berkat program Desadeyan, desa kami kini punya akses air bersih yang tak pernah kami bayangkan. Kualitas hidup kami meningkat drastis!"</p>
+                        <div class="flex items-center">
+                            <img src="https://via.placeholder.com/50/2E7D32/FFFFFF?text=Warga" alt="Foto Warga" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <p class="font-bold text-[var(--color-dark-text)]">Ibu Siti</p>
+                                <p class="text-[var(--color-primary-green)] text-sm">Warga Desa Makmur</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[var(--color-light-cream)] p-6 rounded-lg shadow-sm">
+                        <i class="fas fa-quote-left text-[var(--color-primary-green)] text-3xl mb-4"></i>
+                        <p class="text-[var(--color-dark-text)] italic mb-4">"Pelatihan dari Desadeyan membuka wawasan kami tentang pertanian organik. Hasil panen lebih baik, tanah pun terjaga. Luar biasa!"</p>
+                        <div class="flex items-center">
+                            <img src="https://via.placeholder.com/50/2E7D32/FFFFFF?text=Petani" alt="Foto Petani" class="w-12 h-12 rounded-full mr-4 object-cover">
+                            <div>
+                                <p class="font-bold text-[var(--color-dark-text)]">Pak Joko</p>
+                                <p class="text-[var(--color-primary-green)] text-sm">Petani Desa Sejahtera</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section text-center mt-12 py-10 bg-[var(--color-primary-green)] text-white rounded-lg shadow-md">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Jadilah Bagian dari Perubahan Positif Ini!</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Bersama Desadeyan, setiap langkah kecil Anda akan membawa dampak besar bagi kemajuan desa.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="index.html#contact" class="bg-[var(--color-white)] hover:bg-gray-200 text-[var(--color-primary-green)] font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Donasi Sekarang</a>
+                    <a href="index.html#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-[var(--color-primary-green)] text-white font-bold py-3 px-8 rounded-full transition duration-300">Daftar Relawan</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[var(--color-primary-green)] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[var(--color-primary-green)] font-bold text-lg mr-3">D</div>
+                        <h3 class="text-xl font-bold">Desadeyan</h3>
+                    </div>
+                    <p class="text-gray-200">Lembaga Swadaya Masyarakat yang berkomitmen untuk memberdayakan masyarakat desa melalui program-program berkelanjutan yang ramah lingkungan.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#home" class="text-gray-200 hover:text-white transition">Beranda</a></li>
+                        <li><a href="#profil-kami" class="text-gray-200 hover:text-white transition">Profil Kami</a></li>
+                        <li><a href="index.html#journey-section-inside" class="text-gray-200 hover:text-white transition">Cerita Perjalanan</a></li>
+                        <li><a href="index.html#programs" class="text-gray-200 hover:text-white transition">Program</a></li>
+                        <li><a href="index.html#gallery" class="text-gray-200 hover:text-white transition">Galeri</a></li>
+                        <li><a href="index.html#contact" class="text-gray-200 hover:text-white transition">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Program Unggulan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-200 hover:text-white transition">Edukasi Literasi & Lingkungan</a></li>
+                        <li><a href="#" class="text-gray-200 hover:text-white transition">Pemberdayaan Ekonomi Lokal</a></li>
+                        <li><a href="#" class="text-gray-200 hover:text-white transition">Kesehatan & Sanitasi Desa</a></li>
+                        <li><a href="#" class="text-gray-200 hover:text-white transition">Inovasi Pertanian & Lingkungan</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Berlangganan</h4>
+                    <p class="text-gray-200 mb-4">Dapatkan update terbaru tentang kegiatan kami langsung ke email Anda.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Anda" class="px-4 py-2 rounded-l-lg focus:outline-none text-[var(--color-dark-text)] w-full">
+                        <button type="submit" class="bg-white hover:bg-gray-200 text-[var(--color-primary-green)] px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 mb-4 md:mb-0">© 2023 Desadeyan. Hak Cipta Dilindungi.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white transition">Kebijakan Privasi</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">Syarat & Ketentuan</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">Peta Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="program-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-[var(--color-white)] rounded-lg max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 id="modal-title" class="text-2xl font-bold text-[var(--color-dark-text)]"></h3>
+                        <div id="modal-category" class="text-[var(--color-primary-green)] mt-1"></div>
+                    </div>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <img id="modal-image" src="" alt="" class="w-full h-64 object-cover rounded-lg">
+                    </div>
+                    <div>
+                        <div class="mb-6">
+                            <h4 class="font-bold text-[var(--color-dark-text)] mb-2">Deskripsi Program</h4>
+                            <p id="modal-description" class="text-[var(--color-dark-text)]"></p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-[var(--color-dark-text)] mb-2">Tujuan</h4>
+                            <ul id="modal-goals" class="list-disc list-inside text-[var(--color-dark-text)] pl-4"></ul>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-[var(--color-dark-text)] mb-2">Pencapaian</h4>
+                            <div id="modal-achievements" class="text-[var(--color-dark-text)]"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="font-bold text-[var(--color-dark-text)] mb-4">Galeri Program</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Detail Program Gambar 1" class="w-full h-32 object-cover gallery-img">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Detail Program Gambar 2" class="w-full h-32 object-cover gallery-img">
+                        </div>
+                        <div class="gallery-item overflow-hidden rounded-lg cursor-pointer">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Detail Program Gambar 3" class="w-full h-32 object-cover gallery-img">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 flex justify-center">
+                    <a href="index.html#contact" class="bg-[var(--color-primary-green)] hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                        Dukung Program Ini <i class="fas fa-heart ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content relative">
+            <img id="lightbox-img" src="" alt="" class="rounded-lg">
+            <button id="close-lightbox" class="absolute top-4 right-4 text-white text-3xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="lightbox-caption" class="text-white text-center mt-2"></div>
+        </div>
+    </div>
+
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-[var(--color-primary-green)] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-green-700 transition hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script2.js"></script>
+</body>
+</html>

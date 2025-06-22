@@ -1,1 +1,1 @@
-# LSMsadeyan
+ini untuk keperluan Desadeyan
